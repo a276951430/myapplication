@@ -169,9 +169,11 @@ String id =selectData.getOneContactId(resolver, myCall_logsList.get(i).getNumber
                 name =myCall_logsList.get(i).getNumber();
             }
             intent.putExtra("name", name);
-if (id.equals("-1")){
+
+            intent.putExtra("from", "卡"+(myCall_logsList.get(i).getSim_id()+1));
+            if (id.equals("-1")){
             intent.putExtra("number", myCall_logsList.get(i).getNumber());
-            intent.putExtra("geocode_location", myCall_logsList.get(i).getGeocode_location());
+
         }
         startActivity(intent);
     }

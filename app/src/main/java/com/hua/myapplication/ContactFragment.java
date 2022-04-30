@@ -146,7 +146,8 @@ sideBar = (SideBar) view.findViewById(R.id.side_bar);
                 Intent intent = new Intent(activity, ContactAndCallActivity.class);
                 intent.putExtra("id", contactList.get(i).getId());
 intent.putExtra("name", contactList.get(i).getName());
-                startActivity(intent);
+intent.putExtra("from", contactList.get(i).getFrom());
+startActivity(intent);
             }
         });
     }
